@@ -1,6 +1,6 @@
+require "rhythm.plugins"
 require "rhythm.options"
 require "rhythm.keymaps"
-require "rhythm.plugins"
 require "rhythm.cmp"
 require "rhythm.lsp"
 require "rhythm.telescope"
