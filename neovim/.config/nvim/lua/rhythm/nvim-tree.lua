@@ -58,6 +58,7 @@ nvim_tree.setup {
     view = {
         mappings = {
             list = {
+                { key = "o", action = "edit" },
                 { key = "gs", action = "vsplit" },
                 { key = "gi", action = "split" },
                 { key = "go", action = "preview" },
