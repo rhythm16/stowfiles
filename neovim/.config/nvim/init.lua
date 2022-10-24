@@ -1,0 +1,13 @@
+require "rhythm.options"
+require "rhythm.keymaps"
+require "rhythm.plugins"
+require "rhythm.cmp"
+require "rhythm.lsp"
+require "rhythm.telescope"
+require "rhythm.treesitter"
+require "rhythm.leap"
+require "rhythm.gitsigns"
+require "rhythm.tagbar"
+require "rhythm.nvim-tree"
+require "rhythm.autocmds"
+

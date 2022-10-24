@@ -1,0 +1,19 @@
+[user]
+	name = Wei-Lin Chang
+	email = r09922117@csie.ntu.edu.tw
+[core]
+	editor = nvim
+[alias]
+	loga = log --pretty=format:'%C(yellow)%h %Cblue%>(15)%an %Cgreen%>(15)%ad %Creset%s' --date=relative --graph --decorate
+[safe]
+	directory = /home/rhythm/qemu
+[sendemail]
+	smtpEncryption = tls
+	smtpServer = smtp.gmail.com
+	smtpServerPort = 587
+	smtpUser = r09922117@csie.ntu.edu.tw
+[include]
+	path = ~/.gitcfg_smtpPass
+[init]
+	defaultBranch = main
+

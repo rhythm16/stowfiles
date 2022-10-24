@@ -1,0 +1,3 @@
+# so I remember the format
+[sendemail]
+	smtpPass = thepassword
