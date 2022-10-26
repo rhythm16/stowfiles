@@ -33,6 +33,8 @@ keymap("n", "zf", ":cs find f <C-R>=expand('<cfile>')<CR><CR>", opts)
 keymap("n", "zi", ":cs find i <C-R>=expand('<cfile>')<CR><CR>", opts)
 keymap("n", "zd", ":cs find d <C-R>=expand('<cword>')<CR><CR>", opts)
 
+keymap("n", "<F2>", ":LspStart<CR>:echo \"Lsp started!\"<CR>", opts)
+keymap("n", "<F3>", ":LspStop<CR>:echo \"Lsp stopped!\"<CR>", opts)
 keymap("n", "<F7>", ":NERDTreeToggle<CR>", opts)
 keymap("n", "<F8>", ":TagbarToggle<CR>", opts)
 keymap("n", "<F9>", ":NvimTreeToggle<CR>:wincmd p<CR>", opts)
