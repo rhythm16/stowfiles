@@ -37,6 +37,9 @@ keymap("n", "<F7>", ":NERDTreeToggle<CR>", opts)
 keymap("n", "<F8>", ":TagbarToggle<CR>", opts)
 keymap("n", "<F9>", ":NvimTreeToggle<CR>:wincmd p<CR>", opts)
 
+keymap("n", "\\", ":cd ..<CR>:NvimTreeToggle<CR>:NvimTreeToggle<CR>:wincmd p<CR>", opts)
+keymap("n", "-", ":pwd<CR>", opts)
+
 -- below is colorscheme cycling!
 Colors = vim.fn.getcompletion('', 'color')
 -- the initial index and the color should be in sync
