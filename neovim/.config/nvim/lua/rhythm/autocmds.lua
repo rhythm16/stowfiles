@@ -26,3 +26,8 @@ vim.cmd [[
 autocmd FileType qf nmap <buffer> <CR> <CR>:ccl<CR>
 ]]
 
+-- disable neovim mouse
+vim.cmd [[
+    set mouse=
+]]
+
