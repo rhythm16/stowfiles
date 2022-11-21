@@ -49,7 +49,7 @@ keymap("n", "-", ":pwd<CR>", opts)
 -- below is colorscheme cycling!
 Colors = vim.fn.getcompletion('', 'color')
 -- the initial index and the color should be in sync
--- but it's not a big inconvenience it they aren't though
+-- but it's not a big inconvenience if they aren't though
 Cur_color_index = 3
 vim.cmd([[colorscheme codedark]])
 
