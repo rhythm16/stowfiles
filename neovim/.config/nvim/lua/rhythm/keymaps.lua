@@ -18,8 +18,6 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
-keymap("v", "jk", "<ESC>", opts)
-keymap("v", "kj", "<ESC>", opts)
 
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
