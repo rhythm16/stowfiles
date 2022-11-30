@@ -27,6 +27,7 @@ keymap("n", "=F", ":Telescope find_files cwd=", opts)
 keymap("n", "=g", ":Telescope live_grep<CR>", opts)
 keymap("n", "=G", ":Telescope live_grep cwd=", opts)
 keymap("n", "=s", ":Telescope grep_string<CR>", opts)
+keymap("n", "=b", ":Telescope file_browser<CR>", opts)
 
 keymap("n", "zs", ":cs find s <C-R>=expand('<cword>')<CR><CR>", opts)
 keymap("n", "zg", ":cs find g <C-R>=expand('<cword>')<CR><CR>", opts)
