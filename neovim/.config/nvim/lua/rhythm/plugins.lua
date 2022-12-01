@@ -67,7 +67,7 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-nvim-lua"              -- nvim lua config completions
 
     -- snippets
-    use "L3MON4D3/LuaSnip"                  -- snippt engine
+    use "L3MON4D3/LuaSnip"                  -- snippet engine
     use "rafamadriz/friendly-snippets"      -- a bunch of snippets for numerous languages
 
     -- lsp
