@@ -66,6 +66,7 @@ nvim_tree.setup {
                 { key = "x", action = "close_node" },
                 { key = "O", action = "expand_all" },
                 { key = "C", action = "cd" },
+                { key = "h", action = "toggle_dotfiles" },
             },
         },
     },
