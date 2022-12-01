@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 local actions = require "telescope.actions"
+local fb_actions = require "telescope".extensions.file_browser.actions
 
 telescope.setup {
     defaults = {
@@ -55,6 +56,11 @@ telescope.setup {
                 },
                 ["n"] = {
                   -- your custom normal mode mappings
+                    ['a'] = fb_actions.create,
+                    ['-'] = fb_actions.goto_cwd,
+                    ['C'] = fb_actions.change_cwd,
+                    ['~'] = fb_actions.goto_home_dir,
+                    ['\\'] = fb_actions.goto_parent_dir,
                 },
             },
         },
