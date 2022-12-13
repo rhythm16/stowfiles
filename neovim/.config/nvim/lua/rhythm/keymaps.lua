@@ -2,6 +2,7 @@ local opts = { noremap = true, silent = true }
 
 local keymap = vim.api.nvim_set_keymap
 
+-- window resizing
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
@@ -10,18 +11,20 @@ keymap("n", "H", "<C-w>h", opts)
 keymap("n", "J", "<C-w>j", opts)
 keymap("n", "K", "<C-w>k", opts)
 keymap("n", "L", "<C-w>l", opts)
-
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
+-- escape
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 
+-- visual mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+-- telescope
 keymap("n", "=f", ":Telescope find_files<CR>", opts)
 keymap("n", "=F", ":Telescope find_files cwd=", opts)
 keymap("n", "=g", ":Telescope live_grep<CR>", opts)
@@ -29,6 +32,7 @@ keymap("n", "=G", ":Telescope live_grep cwd=", opts)
 keymap("n", "=s", ":Telescope grep_string<CR>", opts)
 keymap("n", "=b", ":Telescope file_browser<CR>", opts)
 
+-- cscope
 keymap("n", "zs", ":cs find s <C-R>=expand('<cword>')<CR><CR>", opts)
 keymap("n", "zg", ":cs find g <C-R>=expand('<cword>')<CR><CR>", opts)
 keymap("n", "zc", ":cs find c <C-R>=expand('<cword>')<CR><CR>", opts)
@@ -38,15 +42,20 @@ keymap("n", "zf", ":cs find f <C-R>=expand('<cfile>')<CR><CR>", opts)
 keymap("n", "zi", ":cs find i <C-R>=expand('<cfile>')<CR><CR>", opts)
 keymap("n", "zd", ":cs find d <C-R>=expand('<cword>')<CR><CR>", opts)
 
+-- lsp
 keymap("n", "<F2>", ":LspStart<CR>:echo \"Lsp started!\"<CR>", opts)
 keymap("n", "<F3>", ":LspStop<CR>:echo \"Lsp stopped!\"<CR>", opts)
+
+-- UI
 keymap("n", "<F7>", ":NERDTreeToggle<CR>", opts)
 keymap("n", "<F8>", ":TagbarToggle<CR>", opts)
 keymap("n", "<F9>", ":NvimTreeToggle<CR>:wincmd p<CR>", opts)
 
+-- tabs
 keymap("n", "[[", ":tabe<CR>", opts)
 keymap("n", "]]", ":tabc<CR>", opts)
 
+-- working directory
 keymap("n", "\\", ":cd ..<CR>:NvimTreeToggle<CR>:NvimTreeToggle<CR>:wincmd p<CR>", opts)
 keymap("n", "-", ":pwd<CR>", opts)
 
