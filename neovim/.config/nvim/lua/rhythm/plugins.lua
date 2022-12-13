@@ -94,6 +94,10 @@ return packer.startup(function(use)
     -- git
     use "lewis6991/gitsigns.nvim"
 
+    -- zen mode
+    use "folke/zen-mode.nvim"
+    use "folke/twilight.nvim"
+
     -- Automatically set up your config after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

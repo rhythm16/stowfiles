@@ -10,4 +10,6 @@ require "rhythm.gitsigns"
 require "rhythm.tagbar"
 require "rhythm.nvim-tree"
 require "rhythm.autocmds"
+require "rhythm.zen-mode"
+require "rhythm.twilight"
 
