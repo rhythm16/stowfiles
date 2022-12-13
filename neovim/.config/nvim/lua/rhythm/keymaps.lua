@@ -47,6 +47,8 @@ keymap("n", "<F2>", ":LspStart<CR>:echo \"Lsp started!\"<CR>", opts)
 keymap("n", "<F3>", ":LspStop<CR>:echo \"Lsp stopped!\"<CR>", opts)
 
 -- UI
+keymap("n", "<F4>", ":lua vim.opt.listchars = { tab = '> ' , trail = '¬', nbsp = '+' }<CR>:set nu<CR>", opts)
+keymap("n", "<F5>", ":lua vim.opt.listchars = { tab = '  ' , trail = '¬', nbsp = '+' }<CR>:set nonu<CR>", opts)
 keymap("n", "<F7>", ":NERDTreeToggle<CR>", opts)
 keymap("n", "<F8>", ":TagbarToggle<CR>", opts)
 keymap("n", "<F9>", ":NvimTreeToggle<CR>:wincmd p<CR>", opts)
