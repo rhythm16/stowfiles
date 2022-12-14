@@ -101,8 +101,8 @@ wk.register({
         f = {":cs find f <C-R>=expand('<cfile>')<CR><CR>", "File"},
         i = {":cs find i <C-R>=expand('<cfile>')<CR><CR>", "Includes"},
         d = {":cs find d <C-R>=expand('<cword>')<CR><CR>", "Called"},
-        m = {":ZenMode:set scroll=1", "Zen Mode"},
-        n = {":Twilight", "Twilight"},
+        m = {":ZenMode:set scroll=1<CR>", "Zen Mode"},
+        n = {":Twilight<CR>", "Twilight"},
     },
     ["m"] = {
         name = "LSP",
