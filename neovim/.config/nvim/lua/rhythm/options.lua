@@ -12,5 +12,6 @@ vim.opt.cursorline = true
 vim.opt.showtabline = 2
 vim.opt.termguicolors = true
 vim.opt.scroll = 1
+vim.opt.wrap = false
 vim.g.mapleader = ' '
 
