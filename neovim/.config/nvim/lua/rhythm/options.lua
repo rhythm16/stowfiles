@@ -10,4 +10,5 @@ vim.opt.updatetime = 100
 vim.opt.cursorline = true
 vim.opt.showtabline = 2
 vim.opt.termguicolors = true
+vim.opt.scroll = 1
 

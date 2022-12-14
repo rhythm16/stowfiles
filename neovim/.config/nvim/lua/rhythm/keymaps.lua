@@ -15,6 +15,8 @@ keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", ",", "<C-d>:set scroll=1<CR>", opts)
+keymap("n", ".", "<C-u>:set scroll=1<CR>", opts)
 
 -- escape
 keymap("i", "jk", "<ESC>", opts)
