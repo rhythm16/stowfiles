@@ -105,6 +105,9 @@ return packer.startup(function(use)
     use "nvim-tree/nvim-web-devicons"       -- required by trouble.nvim
     use "folke/trouble.nvim"                -- aggregates diagnostics, references, etc.
 
+    -- which-key
+    use "folke/which-key.nvim"
+
     -- Automatically set up your config after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

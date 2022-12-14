@@ -14,4 +14,5 @@ require "rhythm.zen-mode"
 require "rhythm.twilight"
 require "rhythm.nvim-notify"
 require "rhythm.trouble"
+require "rhythm.which-key"
 

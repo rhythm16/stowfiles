@@ -7,8 +7,10 @@ vim.opt.hlsearch = true
 vim.opt.list = true
 vim.opt.listchars = { tab = '> ' , trail = '¬', nbsp = '+' }
 vim.opt.updatetime = 100
+vim.opt.timeoutlen = 600
 vim.opt.cursorline = true
 vim.opt.showtabline = 2
 vim.opt.termguicolors = true
 vim.opt.scroll = 1
+vim.g.mapleader = ' '
 
