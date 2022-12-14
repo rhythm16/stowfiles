@@ -43,8 +43,8 @@ keymap("n", "zi", ":cs find i <C-R>=expand('<cfile>')<CR><CR>", opts)
 keymap("n", "zd", ":cs find d <C-R>=expand('<cword>')<CR><CR>", opts)
 
 -- lsp
-keymap("n", "<F2>", ":LspStart<CR>:echo \"Lsp started!\"<CR>", opts)
-keymap("n", "<F3>", ":LspStop<CR>:echo \"Lsp stopped!\"<CR>", opts)
+keymap("n", "<F2>", ":LspStart<CR>:lua vim.notify(\" Lsp started!\", vim.log.levels.INFO, { title = \" LSP\",})<CR>", opts)
+keymap("n", "<F3>", ":LspStart<CR>:lua vim.notify(\" Lsp stopped!\", vim.log.levels.WARN, { title = \" LSP\",})<CR>", opts)
 
 -- UI
 keymap("n", "<F4>", ":lua vim.opt.listchars = { tab = '> ' , trail = '¬', nbsp = '+' }<CR>:set nu<CR>", opts)
@@ -60,8 +60,8 @@ keymap("n", "[[", ":tabe<CR>", opts)
 keymap("n", "]]", ":tabc<CR>", opts)
 
 -- working directory
-keymap("n", "\\", ":cd ..<CR>:NvimTreeToggle<CR>:NvimTreeToggle<CR>:wincmd p<CR>", opts)
-keymap("n", "-", ":pwd<CR>", opts)
+keymap("n", "\\", ":cd ..<CR>:NvimTreeToggle<CR>:NvimTreeToggle<CR>:wincmd p<CR>:lua vim.notify(\" cwd move up one level!\", vim.log.levels.INFO, { title = \" WORKING DIRECTORY\",})<CR>", opts)
+keymap("n", "-", ":lua local cwd = vim.fn.getcwd(); vim.notify(\" \"..cwd, vim.log.levels.INFO, { title = \" CURRENT WORKING DIRECTORY\",})<CR>", opts)
 
 -- below is colorscheme cycling!
 Colors = vim.fn.getcompletion('', 'color')
@@ -76,7 +76,7 @@ function Next_color()
     local a = "colorscheme "
     local b = Colors[Cur_color_index]
     vim.cmd(a .. b)
-    vim.notify(b .. " " .. tostring(Cur_color_index))
+    vim.notify(" " .. b .. " " .. tostring(Cur_color_index), vim.log.levels.INFO, { title = " COLORSCHEME" })
     vim.cmd("NvimTreeToggle")
     vim.cmd("NvimTreeToggle")
     vim.cmd("wincmd p")
@@ -88,7 +88,7 @@ function Prev_color()
     local a = "colorscheme "
     local b = Colors[Cur_color_index]
     vim.cmd(a .. b)
-    vim.notify(b .. " " .. tostring(Cur_color_index))
+    vim.notify(" " .. b .. " " .. tostring(Cur_color_index), vim.log.levels.INFO, { title = " COLORSCHEME" })
     vim.cmd("NvimTreeToggle")
     vim.cmd("NvimTreeToggle")
     vim.cmd("wincmd p")

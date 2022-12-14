@@ -11,6 +11,8 @@ telescope.setup {
 --        prompt_prefix = "",
 --        selection_caret = "",
         path_display = { "smart" },
+--                shorten = { len = 5 },
+--                "absolute",
         mappings = {
             i = {
                 ["<C-n>"] = actions.cycle_history_next,
