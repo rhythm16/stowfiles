@@ -59,6 +59,13 @@ keymap("n", "zn", ":Twilight<CR>", opts)
 keymap("n", "[[", ":tabe<CR>", opts)
 keymap("n", "]]", ":tabc<CR>", opts)
 
+-- trouble
+keymap("n", "==", ":TroubleToggle<CR>", opts)
+keymap("n", "=w", ":TroubleToggle workspace_diagnostics<CR>", opts)
+keymap("n", "=d", ":TroubleToggle document_diagnostics<CR>", opts)
+keymap("n", "=q", ":TroubleToggle quickfix<CR>", opts)
+keymap("n", "=l", ":TroubleToggle loclist<CR>", opts)
+
 -- working directory
 keymap("n", "\\", ":cd ..<CR>:NvimTreeToggle<CR>:NvimTreeToggle<CR>:wincmd p<CR>:lua vim.notify(\" cwd move up one level!\", vim.log.levels.INFO, { title = \" WORKING DIRECTORY\",})<CR>", opts)
 keymap("n", "-", ":lua local cwd = vim.fn.getcwd(); vim.notify(\" \"..cwd, vim.log.levels.INFO, { title = \" CURRENT WORKING DIRECTORY\",})<CR>", opts)

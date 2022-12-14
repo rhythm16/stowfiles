@@ -101,6 +101,10 @@ return packer.startup(function(use)
     -- nvim-notify
     use "rcarriga/nvim-notify"
 
+    -- trouble
+    use "nvim-tree/nvim-web-devicons"       -- required by trouble.nvim
+    use "folke/trouble.nvim"                -- aggregates diagnostics, references, etc.
+
     -- Automatically set up your config after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
