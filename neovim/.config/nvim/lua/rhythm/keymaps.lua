@@ -54,7 +54,7 @@ keymap("n", "<F5>", ":lua vim.opt.listchars = { tab = '  ' , trail = '¬', nbsp 
 keymap("n", "<F7>", ":NERDTreeToggle<CR>", opts)
 keymap("n", "<F8>", ":TagbarToggle<CR>", opts)
 keymap("n", "<F9>", ":NvimTreeToggle<CR>:wincmd p<CR>", opts)
-keymap("n", "zm", ":ZenMode<CR>", opts)
+keymap("n", "zm", ":ZenMode<CR>:set scroll=1<CR>", opts)
 keymap("n", "zn", ":Twilight<CR>", opts)
 
 -- tabs
