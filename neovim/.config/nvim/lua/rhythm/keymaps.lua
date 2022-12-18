@@ -46,7 +46,7 @@ keymap("n", "zd", ":cs find d <C-R>=expand('<cword>')<CR><CR>", opts)
 
 -- lsp
 keymap("n", "<F2>", ":LspStart<CR>:lua vim.notify(\" Lsp started!\", vim.log.levels.INFO, { title = \" LSP\",})<CR>", opts)
-keymap("n", "<F3>", ":LspStart<CR>:lua vim.notify(\" Lsp stopped!\", vim.log.levels.WARN, { title = \" LSP\",})<CR>", opts)
+keymap("n", "<F3>", ":LspStop<CR>:lua vim.notify(\" Lsp stopped!\", vim.log.levels.WARN, { title = \" LSP\",})<CR>", opts)
 
 -- UI
 keymap("n", "<F4>", ":lua vim.opt.listchars = { tab = '> ' , trail = '¬', nbsp = '+' }<CR>:set nu<CR>", opts)
