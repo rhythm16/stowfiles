@@ -1,4 +1,4 @@
--- don't warn that "vim" is a undefined global
+-- don't warn that "vim" is an undefined global
 return {
     settings = {
         Lua = {
