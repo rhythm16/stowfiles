@@ -12,6 +12,7 @@ configs.setup {
         "gitattributes",
 -- this needs node
 --        "gitignore",
+        "latex",
         "lua",
         "make",
         "markdown",
