@@ -12,9 +12,9 @@ require("mason-lspconfig").setup_handlers {
             capabilities = require("rhythm.lsp.handlers").capabilities,
         }
         -- server specific opts
-        if server_name == "sumneko_lua" then
-             local sumneko_opts = require("rhythm.lsp.settings.sumneko_lua")
-             opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
+        if server_name == "lua_ls" then
+             local lua_ls_opts = require("rhythm.lsp.settings.lua_ls")
+             opts = vim.tbl_deep_extend("force", lua_ls_opts, opts)
         end
         require("lspconfig")[server_name].setup(opts)
     end,
