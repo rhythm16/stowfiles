@@ -56,6 +56,7 @@ return packer.startup(function(use)
     use "lunarvim/colorschemes"             -- Some colorschemes to try out
     use "tomasiser/vim-code-dark"           -- codedark colorscheme
     use "lunarvim/synthwave84.nvim"
+    use 'folke/tokyonight.nvim'
 
     -- completion
     use "hrsh7th/nvim-cmp"                  -- The completion engine
