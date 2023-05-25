@@ -2,7 +2,7 @@ neovim config mainly adopted from the [LunarVim/Neovim-from-scratch](https://git
 
 ## Installation
 ```
-sudo apt install stow git
+sudo apt install stow git cscope
 # rust & cargo
 curl https://sh.rustup.rs -sSf | sh
 cargo install bob-nvim
@@ -13,7 +13,7 @@ cargo install ripgrep
 ```
 
 ## Dependencies
-* `cargo install ripgrep` (for telescope live-grep)
+* `ripgrep` (for telescope live-grep)
 * universal ctags (for rust tagbar)
 
 ## Fixes
