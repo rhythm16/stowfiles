@@ -22,7 +22,7 @@ cargo install bat
 * `ripgrep` (for telescope live-grep)
 * universal ctags (for rust tagbar)
 * tree-sitter cli (for tree-sitter
-* a [nerd font]{https://www.nerdfonts.com/}
+* a [nerd font](https://www.nerdfonts.com/)
 
 ## Fixes
 * `trouble.nvim` [PR](https://github.com/folke/trouble.nvim/pull/72)
