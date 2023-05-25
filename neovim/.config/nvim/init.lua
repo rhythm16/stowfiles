@@ -15,4 +15,5 @@ require "rhythm.twilight"
 require "rhythm.nvim-notify"
 require "rhythm.trouble"
 require "rhythm.which-key"
+require "rhythm.cscope_maps"
 

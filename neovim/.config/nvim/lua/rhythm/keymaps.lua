@@ -35,14 +35,15 @@ keymap("n", "=s", ":Telescope grep_string<CR>", opts)
 keymap("n", "=b", ":Telescope file_browser<CR>", opts)
 
 -- cscope
-keymap("n", "zs", ":cs find s <C-R>=expand('<cword>')<CR><CR>", opts)
-keymap("n", "zg", ":cs find g <C-R>=expand('<cword>')<CR><CR>", opts)
-keymap("n", "zc", ":cs find c <C-R>=expand('<cword>')<CR><CR>", opts)
-keymap("n", "zt", ":cs find t <C-R>=expand('<cword>')<CR><CR>", opts)
-keymap("n", "ze", ":cs find e <C-R>=expand('<cword>')<CR><CR>", opts)
-keymap("n", "zf", ":cs find f <C-R>=expand('<cfile>')<CR><CR>", opts)
-keymap("n", "zi", ":cs find i <C-R>=expand('<cfile>')<CR><CR>", opts)
-keymap("n", "zd", ":cs find d <C-R>=expand('<cword>')<CR><CR>", opts)
+keymap("n", "zs", '<cmd>Cscope find s vim.fn.expand("<cword>"))<CR>', opts)
+keymap("n", "zg", '<cmd>Cscope find g vim.fn.expand("<cword>"))<CR>', opts)
+keymap("n", "zc", '<cmd>Cscope find c vim.fn.expand("<cword>"))<CR>', opts)
+keymap("n", "zt", '<cmd>Cscope find t vim.fn.expand("<cword>"))<CR>', opts)
+keymap("n", "ze", '<cmd>Cscope find e vim.fn.expand("<cword>"))<CR>', opts)
+keymap("n", "zf", '<cmd>Cscope find f vim.fn.expand("<cword>"))<CR>', opts)
+keymap("n", "zi", '<cmd>Cscope find i vim.fn.expand("<cword>"))<CR>', opts)
+keymap("n", "zd", '<cmd>Cscope find d vim.fn.expand("<cword>"))<CR>', opts)
+keymap("n", "za", '<cmd>Cscope find a vim.fn.expand("<cword>"))<CR>', opts)
 
 -- lsp
 keymap("n", "<F2>", ":LspStart<CR>:lua vim.notify(\" Lsp started!\", vim.log.levels.INFO, { title = \" LSP\",})<CR>", opts)
