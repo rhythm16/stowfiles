@@ -10,6 +10,7 @@
 -- close quickfix when CR is hit
 vim.cmd [[
 autocmd FileType qf nmap <buffer> <CR> <CR>:ccl<CR>
+autocmd FileType qf 12wincmd_
 ]]
 
 -- disable neovim mouse

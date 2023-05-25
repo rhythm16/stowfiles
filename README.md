@@ -15,7 +15,6 @@ cargo install tree-sitter-cli
 # other nice things:
 cargo install zellij
 cargo install bat
-
 ```
 
 ## Dependencies
