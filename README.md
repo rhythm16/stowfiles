@@ -7,14 +7,22 @@ sudo apt install stow git cscope
 curl https://sh.rustup.rs -sSf | sh
 cargo install bob-nvim
 cargo install ripgrep
+cargo install tree-sitter-cli
 # bob install x.y.z
 # bob use x.y.z
 # install universal ctags
+
+# other nice things:
+cargo install zellij
+cargo install bat
+
 ```
 
 ## Dependencies
 * `ripgrep` (for telescope live-grep)
 * universal ctags (for rust tagbar)
+* tree-sitter cli (for tree-sitter
+* a [nerd font]{https://www.nerdfonts.com/}
 
 ## Fixes
 * `trouble.nvim` [PR](https://github.com/folke/trouble.nvim/pull/72)
