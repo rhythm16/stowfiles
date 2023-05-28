@@ -113,6 +113,9 @@ return packer.startup(function(use)
     -- cscope keymaps
     use 'dhananjaylatkar/cscope_maps.nvim'
 
+    -- bufferline
+    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
     -- Automatically set up your config after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

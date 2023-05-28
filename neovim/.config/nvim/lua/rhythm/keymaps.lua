@@ -60,7 +60,14 @@ keymap("n", "zn", ":Twilight<CR>", opts)
 
 -- tabs
 keymap("n", "[[", ":tabe<CR>", opts)
-keymap("n", "]]", ":tabc<CR>", opts)
+keymap("n", "]]", ":tabclose<CR>", opts)
+keymap("n", "gn", ":tabnext<CR>", opts)
+keymap("n", "gp", ":tabprevious<CR>", opts)
+
+-- buffers
+keymap("n", "gN", ":bnext<CR>", opts)
+keymap("n", "gP", ":bprevious<CR>", opts)
+keymap("n", "gD", ":bdelete<CR>:bnext<CR>", opts)
 
 -- trouble
 keymap("n", "==", ":TroubleToggle<CR>", opts)
