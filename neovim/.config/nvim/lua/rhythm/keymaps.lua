@@ -81,8 +81,8 @@ keymap("n", "-", ":lua local cwd = vim.fn.getcwd(); vim.notify(\" \"..cwd, vim.l
 Colors = vim.fn.getcompletion('', 'color')
 -- the initial index and the color should be in sync
 -- but it's not a big inconvenience if they aren't though
-Cur_color_index = 3
-vim.cmd([[colorscheme codedark]])
+Cur_color_index = 7
+vim.cmd([[colorscheme catppuccin-mocha]])
 
 function Next_color()
     Cur_color_index = Cur_color_index + 1

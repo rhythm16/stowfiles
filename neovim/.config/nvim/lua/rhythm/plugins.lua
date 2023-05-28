@@ -57,6 +57,7 @@ return packer.startup(function(use)
     use "tomasiser/vim-code-dark"           -- codedark colorscheme
     use "lunarvim/synthwave84.nvim"
     use 'folke/tokyonight.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     -- completion
     use "hrsh7th/nvim-cmp"                  -- The completion engine
