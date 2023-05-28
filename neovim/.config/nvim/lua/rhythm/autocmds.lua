@@ -8,6 +8,7 @@
 -- ]]
 
 -- close quickfix when CR is hit
+-- and make the quickfix window larger
 vim.cmd [[
 autocmd FileType qf nmap <buffer> <CR> <CR>:ccl<CR>
 autocmd FileType qf 12wincmd_
