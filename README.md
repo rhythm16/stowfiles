@@ -20,7 +20,7 @@ cargo install bat
 ## Dependencies
 * `ripgrep` (for telescope live-grep)
 * universal ctags (for rust tagbar)
-* tree-sitter cli (for tree-sitter
+* tree-sitter cli (for tree-sitter)
 * a [nerd font](https://www.nerdfonts.com/)
 
 ## Fixes
