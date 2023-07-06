@@ -90,8 +90,8 @@ return packer.startup(function(use)
     -- tagbar
     use "preservim/tagbar"
 
-    -- leap
-    use "ggandor/leap.nvim"
+    -- flash
+    use "folke/flash.nvim"
 
     -- git
     use "lewis6991/gitsigns.nvim"

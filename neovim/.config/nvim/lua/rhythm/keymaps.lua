@@ -34,6 +34,9 @@ keymap("n", "=G", ":Telescope live_grep cwd=", opts)
 keymap("n", "=s", ":Telescope grep_string<CR>", opts)
 keymap("n", "=b", ":Telescope file_browser<CR>", opts)
 
+-- flash
+keymap("n", "s", "<cmd>lua require(\"flash\").jump()<CR>", opts)
+
 -- cscope
 keymap("n", "zs", '<cmd>Cscope find s vim.fn.expand("<cword>"))<CR>', opts)
 keymap("n", "zg", '<cmd>Cscope find g vim.fn.expand("<cword>"))<CR>', opts)
