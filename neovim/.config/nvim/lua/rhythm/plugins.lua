@@ -58,6 +58,7 @@ return packer.startup(function(use)
     use "lunarvim/synthwave84.nvim"
     use 'folke/tokyonight.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
+    use { "rose-pine/nvim", as = "rose-pine" }
 
     -- completion
     use "hrsh7th/nvim-cmp"                  -- The completion engine
