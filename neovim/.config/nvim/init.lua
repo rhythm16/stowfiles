@@ -1,5 +1,6 @@
 require "rhythm.plugins"
 require "rhythm.options"
+require "rhythm.flash"
 require "rhythm.keymaps"
 require "rhythm.cmp"
 require "rhythm.lsp"
@@ -16,5 +17,4 @@ require "rhythm.trouble"
 require "rhythm.which-key"
 require "rhythm.cscope_maps"
 require "rhythm.bufferline"
-require "rhythm.flash"
 
