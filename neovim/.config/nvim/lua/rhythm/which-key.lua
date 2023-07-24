@@ -85,6 +85,7 @@ wk.register({
         G = { "<cmd>Telescope live_grep cwd=", "Live Grep at" },
         s = { "<cmd>Telescope grep_string<CR>", "Grep String" },
         b = { "<cmd>Telescope file_browser<CR>", "Browse File" },
+        c = { "<cmd>Telescope colorscheme<CR>", "Colorscheme" },
         ["="] = { "<cmd>TroubleToggle<CR>", "Trouble" },
         w = { "<cmd>TroubleToggle workspace_diagnostics<CR>", "Trouble Workspace" },
         d = { "<cmd>TroubleToggle document_diagnostics<CR>", "Trouble Document" },

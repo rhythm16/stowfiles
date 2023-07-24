@@ -33,6 +33,7 @@ keymap("n", "=g", ":Telescope live_grep<CR>", opts)
 keymap("n", "=G", ":Telescope live_grep cwd=", opts)
 keymap("n", "=s", ":Telescope grep_string<CR>", opts)
 keymap("n", "=b", ":Telescope file_browser<CR>", opts)
+keymap("n", "=c", ":Telescope colorscheme<CR>", opts)
 
 -- flash
 keymap("n", "s", "<cmd>lua require(\"flash\").jump()<CR>", opts)
