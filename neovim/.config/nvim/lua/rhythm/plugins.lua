@@ -59,6 +59,8 @@ return packer.startup(function(use)
     use 'folke/tokyonight.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
     use { "rose-pine/nvim", as = "rose-pine" }
+    use 'luisiacc/gruvbox-baby'
+    use "ellisonleao/gruvbox.nvim"
 
     -- completion
     use "hrsh7th/nvim-cmp"                  -- The completion engine
