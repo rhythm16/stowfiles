@@ -120,5 +120,6 @@ wk.register({
         n = {"<cmd>lua vim.diagnostic.goto_next()<CR>", "Goto Next Diagnostic"},
         p = {"<cmd>lua vim.diagnostic.goto_prev()<CR>", "Goto Prev Diagnostic"},
         a = {"<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Actions"},
+        e = {"<cmd>lua Start_standalone_rust_client()<CR>", "rust-analyzer standalone"},
     },
 })
