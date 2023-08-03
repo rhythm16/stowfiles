@@ -113,7 +113,7 @@ wk.register({
         h = {"<cmd>lua vim.lsp.buf.hover()<CR>", "Hover"},
         i = {"<cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation"},
         u = {"<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature Help"},
-        s = {"<cmd>lua vim.lsp.buf.references()<CR>", "References"},
+        s = {"<cmd>Telescope lsp_references show_line=false<CR>", "References"},
         S = {"<cmd>lua vim.lsp.buf.incoming_calls()<CR>", "Incoming Calls"},
         r = {"<cmd>lua vim.lsp.buf.rename()<CR>", "Rename"},
         o = {"<cmd>lua vim.diagnostic.open_float()<CR>", "Open Float"},
