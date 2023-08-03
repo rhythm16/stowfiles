@@ -80,7 +80,7 @@ wk.register({
     ["="] = {
         name = "Telescope & Trouble",
         f = { "<cmd>Telescope find_files<CR>", "Find File" },
-        F = { "<cmd>Telescope find_files cwd=", "Find File at" },
+        F = { "<cmd>Telescope find_files hidden=true<CR>", "Find File hidden" },
         g = { "<cmd>Telescope live_grep<CR>", "Live Grep" },
         G = { "<cmd>Telescope live_grep cwd=", "Live Grep at" },
         s = { "<cmd>Telescope grep_string<CR>", "Grep String" },

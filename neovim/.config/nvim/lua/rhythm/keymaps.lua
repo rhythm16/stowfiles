@@ -28,7 +28,7 @@ keymap("v", ">", ">gv", opts)
 
 -- telescope
 keymap("n", "=f", ":Telescope find_files<CR>", opts)
-keymap("n", "=F", ":Telescope find_files cwd=", opts)
+keymap("n", "=F", ":Telescope find_files hidden=true<CR>", opts)
 keymap("n", "=g", ":Telescope live_grep<CR>", opts)
 keymap("n", "=G", ":Telescope live_grep cwd=", opts)
 keymap("n", "=s", ":Telescope grep_string<CR>", opts)
