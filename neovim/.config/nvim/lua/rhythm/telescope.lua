@@ -8,6 +8,7 @@ local fb_actions = require "telescope".extensions.file_browser.actions
 
 telescope.setup {
     defaults = {
+        initial_mode = "normal",
 --        prompt_prefix = "",
 --        selection_caret = "",
         path_display = { "truncate" },
