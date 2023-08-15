@@ -6,11 +6,6 @@ if not status_ok then
     return
 end
 
-local config_status_ok, _ = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-    return
-end
-
 --
 -- This function has been generated from your
 --   view.mappings.list
@@ -136,16 +131,8 @@ nvim_tree.setup {
         highlight_git = true,
         icons = {
             show = {
-                file = false,
-                folder_arrow = false,
-            },
-            glyphs = {
-                folder = {
-                    default = "▸",
-                    open = "▾",
-                    empty = "▸",
-                    empty_open = "▾",
-                },
+                file = true,
+                folder_arrow = true,
             },
         },
     },
