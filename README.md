@@ -10,6 +10,7 @@ cargo install ripgrep
 cargo install tree-sitter-cli
 # bob install x.y.z
 # bob use x.y.z
+# bob use HASH (if on aarch64)
 # install universal ctags
 
 # other nice things:
