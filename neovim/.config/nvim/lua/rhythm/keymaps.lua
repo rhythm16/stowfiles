@@ -121,5 +121,5 @@ end
 
 keymap("n", "<C-n>", "", { callback = Next_color })
 keymap("n", "<C-p>", "", { callback = Prev_color })
--- end colorscheme cycline!
+-- end colorscheme cycling!
 
