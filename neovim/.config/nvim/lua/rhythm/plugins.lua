@@ -97,6 +97,9 @@ return packer.startup(function(use)
     -- git
     use "lewis6991/gitsigns.nvim"
 
+    -- tagbar
+    use "stevearc/aerial.nvim"
+
     -- zen mode
     use "folke/zen-mode.nvim"
     use "folke/twilight.nvim"
