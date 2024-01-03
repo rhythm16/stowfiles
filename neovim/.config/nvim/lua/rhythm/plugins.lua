@@ -91,9 +91,6 @@ return packer.startup(function(use)
     }
     use "nvim-treesitter/nvim-treesitter-context"
 
-    -- tagbar
-    use "preservim/tagbar"
-
     -- flash
     use "folke/flash.nvim"
 
