@@ -1,0 +1,50 @@
+(defwindow bar
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "0%"
+                               :width "99%"
+                               :height "2.5%"
+                               :anchor "top center")
+           :stacking "fg"
+           :exclusive "true"
+           :focusable "false"
+  (info :text "${time.month} ${time.date},	${time.day}	${time.hour} : ${time.min}"
+           :name "rhythm"))
+
+(defwidget info [?text name]
+(box :orientation "horizontal"
+     :hexpand "true"
+     :halign "end"
+     :spacing 18
+     :space-evenly "false"
+  text
+  (_battery :status {EWW_BATTERY.BAT0.status}
+            :battery {EWW_BATTERY.BAT0.capacity}
+            :charge "󰂄" :zero "󰂎" :one "󰁺" :two "󰁻" :three "󰁼" :four "󰁽"
+            :five "󰁾" :six "󰁿" :seven "󰂀" :eight "󰂁" :nine "󰂂" :full "󰁹")
+)
+)
+
+(defwidget _battery [battery status zero one two three four
+                    five six seven eight nine full charge]
+  (box :class "bat" :space-evenly true
+    :tooltip {EWW_BATTERY.BAT0.capacity}
+    (label :text {status == 'Charging' ? charge :
+      battery < 10 ? zero :
+      battery < 20 ? one :
+      battery < 30 ? two :
+      battery < 40 ? three :
+      battery < 50 ? four :
+      battery < 60 ? five :
+      battery < 70 ? six :
+      battery < 80 ? seven :
+      battery < 90 ? eight :
+      battery < 98 ? nine : full})))
+
+(defpoll time :interval "3s"
+  `date +'{"month":"%b","date":"%d","day":"%a","hour":"%H","min":"%M"}'`)
+
+;;  (button :onclick "notify-send 'Hello' 'Hello, ${name}'"
+;;    :halign "end"
+;;    :tooltip "button"
+;;    "Greet")
