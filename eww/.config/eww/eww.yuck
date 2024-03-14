@@ -13,7 +13,22 @@
   )
 )
 
-(defwidget info [?text name]
+(defwindow wallpaper
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "0%"
+                               :width "100%"
+                               :height "100%"
+                               :anchor "bottom center")
+           :stacking "bg"
+           :exclusive "false"
+           :focusable "false"
+           (box :vexpand "true"
+                :space-evenly "false"
+                :style "background-image: url('./wallpapers/loficafe.jpg')")
+)
+
+(defwidget info [?text]
   (box :orientation "horizontal"
        :hexpand "true"
        :halign "end"
