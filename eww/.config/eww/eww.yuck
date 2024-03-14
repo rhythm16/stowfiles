@@ -3,13 +3,12 @@
            :geometry (geometry :x "0%"
                                :y "0%"
                                :width "99%"
-                               :height "2.5%"
+                               :height "2%"
                                :anchor "top center")
            :stacking "fg"
            :exclusive "true"
            :focusable "false"
-  (info :text "${time.month} ${time.date},	${time.day}	${time.hour} : ${time.min}"
-           :name "rhythm"
+  (info :text "${time.month} ${time.date},	${time.day}	${time.hour} : ${time.min} "
   )
 )
 
@@ -31,21 +30,24 @@
 (defwidget info [?text]
   (box :orientation "horizontal"
        :hexpand "true"
-       :halign "end"
-       :spacing 18
-       :space-evenly "false"
-       text
-       (_battery :status {EWW_BATTERY.BAT0.status}
-                 :battery {EWW_BATTERY.BAT0.capacity}
-                 :charge "󰂄" :zero "󰂎" :one "󰁺" :two "󰁻" :three "󰁼" :four "󰁽"
-                 :five "󰁾" :six "󰁿" :seven "󰂀" :eight "󰂁" :nine "󰂂" :full "󰁹"
+       :space-evenly "true"
+       (box ) ;; placeholder, left
+       (box :halign "center" (label :text text :class "info-cls" :tooltip calendar))
+       (box :space-evenly "false" :halign "end" :spacing 18
+         (_network :strength "100" :offline "󰤮" :excellent "" :good "󰤥"
+                   :okay "󰤢" :slow "󰤟")
+         (_battery :status {EWW_BATTERY.BAT0.status}
+                   :battery {EWW_BATTERY.BAT0.capacity}
+                   :charge "󰂄" :zero "󰂎" :one "󰁺" :two "󰁻" :three "󰁼" :four "󰁽"
+                   :five "󰁾" :six "󰁿" :seven "󰂀" :eight "󰂁" :nine "󰂂" :full "󰁹"
+         )
        )
   )
 )
 
 (defwidget _battery [battery status zero one two three four
                     five six seven eight nine full charge]
-  (box :class "bat" :space-evenly true
+  (box :class "bat" :space-evenly true :halign "end"
        :tooltip {EWW_BATTERY.BAT0.capacity}
        (label :text {status == 'Charging' ? charge :
               battery < 10 ? zero :
@@ -62,11 +64,27 @@
   )
 )
 
+(defwidget _network [strength offline excellent
+                    good okay slow]
+  (box :class "net"
+       :space-evenly false
+       :spacing 8
+       :halign "end"
+    (label :text {strength == "" ? offline :
+      strength < 26 ? slow :
+        strength < 51 ? okay :
+          strength < 76 ? good : excellent})))
+
 (defpoll time :interval "3s"
         `date +'{"month":"%b","date":"%d","day":"%a","hour":"%H","min":"%M"}'`
 )
 
-;;  (button :onclick "notify-send 'Hello' 'Hello, ${name}'"
-;;    :halign "end"
-;;    :tooltip "button"
-;;    "Greet")
+(defpoll calendar :interval "1m"
+        :initial `cal`
+        `cal`
+)
+
+(defpoll net :interval "10s"
+  :initial `N/A`
+  `nmcli -t -f SIGNAL,ACTIVE device wifi \
+    | awk -F':' '{if($2=="yes")print$1}'`)
