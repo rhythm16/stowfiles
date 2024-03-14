@@ -9,6 +9,7 @@
            :exclusive "true"
            :focusable "false"
   (info :text "${time.month} ${time.date},	${time.day}	${time.hour} : ${time.min} "
+        :current_id current_id
   )
 )
 
@@ -27,11 +28,15 @@
                 :style "background-image: url('./wallpapers/loficafe.jpg')")
 )
 
-(defwidget info [?text]
+(defwidget info [?text current_id]
   (box :orientation "horizontal"
        :hexpand "true"
        :space-evenly "true"
-       (box ) ;; placeholder, left
+       (box :halign "start" :spacing 18 :space-evenly "false"
+         (for id in id-list
+           (label :text {id == current_id ? id + "*" : id})
+         )
+       )
        (box :halign "center" (label :text text :class "info-cls" :tooltip calendar))
        (box :space-evenly "false" :halign "end" :spacing 18
          (_network :strength "100" :offline "󰤮" :excellent "" :good "󰤥"
@@ -88,3 +93,9 @@
   :initial `N/A`
   `nmcli -t -f SIGNAL,ACTIVE device wifi \
     | awk -F':' '{if($2=="yes")print$1}'`)
+
+(deflisten id-list :initial "[]"
+  `python3 ./show_workspace_ids.py`)
+
+(deflisten current_id :initial ""
+  `python3 ./show_current_id.py`)
