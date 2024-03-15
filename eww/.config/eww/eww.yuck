@@ -95,7 +95,7 @@
     | awk -F':' '{if($2=="yes")print$1}'`)
 
 (deflisten id-list :initial "[]"
-  `python3 ./show_workspace_ids.py`)
+  `python3 ./show_hypr_info.py --info workspaces`)
 
 (deflisten current_id :initial ""
-  `python3 ./show_current_id.py`)
+  `python3 ./show_hypr_info.py --info activeworkspace`)
