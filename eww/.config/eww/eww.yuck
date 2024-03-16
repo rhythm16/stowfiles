@@ -39,7 +39,7 @@
        )
        (box :halign "center" (label :text text :class "info-cls" :tooltip calendar))
        (box :space-evenly "false" :halign "end" :spacing 18
-         (_network :strength "100" :offline "󰤮" :excellent "" :good "󰤥"
+         (_network :strength net :offline "󰤮" :excellent "" :good "󰤥"
                    :okay "󰤢" :slow "󰤟")
          (_battery :status {EWW_BATTERY.BAT0.status}
                    :battery {EWW_BATTERY.BAT0.capacity}
