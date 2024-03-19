@@ -30,6 +30,8 @@ with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:
 
     while True:
         bytes_recved = client.recv(1024)
+        if bytes_recved == b'':
+            exit()
         events_list = bytes_recved.decode("utf-8").split('\n')[:-1]
         for event in events_list:
             if event.startswith("workspace>>") and args.info == "activeworkspace":
