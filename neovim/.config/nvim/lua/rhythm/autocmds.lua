@@ -26,3 +26,6 @@ local function open_nvim_tree()
 end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
+-- yanks to system clipboard
+vim.api.nvim_set_option("clipboard", "unnamedplus")
