@@ -11,7 +11,7 @@ if args.info == "":
     exit()
 
 if args.info == "activeworkspace":
-    current_id = subprocess.run(["hyprctl", "activeworkspace"],  stdout=subprocess.PIPE)
+    current_id = subprocess.run(["hyprctl", "activeworkspace"], stdout=subprocess.PIPE)
     current_id = int(current_id.stdout.decode("utf-8").split(' ')[2])
     print(current_id, flush=True)
 elif args.info == "workspaces":
