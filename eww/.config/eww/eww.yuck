@@ -25,7 +25,7 @@
            :focusable "false"
            (box :vexpand "true"
                 :space-evenly "false"
-                :style "background-image: url('./wallpapers/loficafe.jpg')")
+                :style "background-image: url('./wallpapers/balcony.png'); background-size: cover; background-position: center")
 )
 
 (defwidget info [?text current_id]
