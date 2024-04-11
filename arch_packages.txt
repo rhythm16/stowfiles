@@ -7,6 +7,8 @@ bc 1.07.1-4
 bind 9.18.25-1
 brightnessctl 0.5.1-2
 clang 17.0.6-1
+cmake 3.29.1-1
+cpio 2.15-1
 cryptsetup 2.7.1-1
 efibootmgr 18-3
 efitools 1.9.2-5
@@ -34,10 +36,13 @@ llvm 17.0.6-2
 lsof 4.99.3-2
 lvm2 2.03.23-3
 man-db 2.12.0-1
+man-pages 6.7-1
+meson 1.4.0-2
 neofetch 7.1.0-2
 neovim 0.9.5-5
 networkmanager 1.46.0-2
 npm 10.5.1-1
+pacman-contrib 1.10.5-1
 pipewire 1:1.0.4-4
 pipewire-pulse 1:1.0.4-4
 polkit-kde-agent 6.0.3-1
