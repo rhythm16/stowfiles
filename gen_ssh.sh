@@ -2,7 +2,9 @@
 
 echo "Enter Email:"
 read email
-ssh-keygen -t ed25519 -C "${email}"
+echo "Key name:"
+read key_name
+ssh-keygen -t ed25519 -C "${email}" -f ~/.ssh/${key_name}
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-cat ~/.ssh/id_ed25519.pub
+ssh-add ~/.ssh/${key_name}
+cat ~/.ssh/${key_name}.pub
