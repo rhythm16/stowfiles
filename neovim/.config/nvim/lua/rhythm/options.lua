@@ -13,5 +13,8 @@ vim.opt.showtabline = 2
 vim.opt.termguicolors = true
 vim.opt.scroll = 1
 vim.opt.wrap = false
+vim.opt.foldlevel = 20
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.g.mapleader = ' '
 

@@ -44,10 +44,10 @@ keymap("n", "zg", '<cmd>Cscope find g vim.fn.expand("<cword>"))<CR>', opts)
 keymap("n", "zc", '<cmd>Cscope find c vim.fn.expand("<cword>"))<CR>', opts)
 keymap("n", "zt", '<cmd>Cscope find t vim.fn.expand("<cword>"))<CR>', opts)
 keymap("n", "ze", '<cmd>Cscope find e vim.fn.expand("<cword>"))<CR>', opts)
-keymap("n", "zf", '<cmd>Cscope find f vim.fn.expand("<cword>"))<CR>', opts)
+keymap("n", "zF", '<cmd>Cscope find f vim.fn.expand("<cword>"))<CR>', opts)
 keymap("n", "zi", '<cmd>Cscope find i vim.fn.expand("<cword>"))<CR>', opts)
 keymap("n", "zd", '<cmd>Cscope find d vim.fn.expand("<cword>"))<CR>', opts)
-keymap("n", "za", '<cmd>Cscope find a vim.fn.expand("<cword>"))<CR>', opts)
+keymap("n", "zx", '<cmd>Cscope find a vim.fn.expand("<cword>"))<CR>', opts)
 
 -- lsp
 keymap("n", "<F2>", ":LspStart<CR>:lua vim.notify(\" Lsp started!\", vim.log.levels.INFO, { title = \" LSP\",})<CR>", opts)
