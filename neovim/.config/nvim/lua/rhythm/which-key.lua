@@ -99,7 +99,7 @@ wk.register({
         c = {":Cscope find c <C-R>=expand('<cword>')<CR><CR>", "Calls to this symbol"},
         t = {":Cscope find t <C-R>=expand('<cword>')<CR><CR>", "Text"},
         e = {":Cscope find e <C-R>=expand('<cword>')<CR><CR>", "Egrep"},
-        F = {":Cscope find f <C-R>=expand('<cfile>')<CR><CR>", "File"},
+        f = {":Cscope find f <C-R>=expand('<cfile>')<CR><CR>", "File"},
         i = {":Cscope find i <C-R>=expand('<cfile>')<CR><CR>", "Includes"},
         d = {":Cscope find d <C-R>=expand('<cword>')<CR><CR>", "Functions that this symbol calls"},
         x = {":Cscope find a <C-R>=expand('<cword>')<CR><CR>", "Places this symbol gets assigned"},
