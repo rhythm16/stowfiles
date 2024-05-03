@@ -16,5 +16,6 @@ vim.opt.wrap = false
 vim.opt.foldlevel = 20
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.fileformats = 'unix'
 vim.g.mapleader = ' '
 
