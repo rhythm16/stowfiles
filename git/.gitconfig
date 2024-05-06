@@ -12,6 +12,8 @@
 	smtpUser = r09922117@csie.ntu.edu.tw
 [include]
 	path = ~/.gitcfg_smtpPass
+[merge]
+	conflictStyle = diff3
 [init]
 	defaultBranch = main
 
