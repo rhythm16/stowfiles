@@ -24,9 +24,10 @@ elif args.info == "workspaces":
     print(id_list, flush=True)
 
 hyprland_sig = os.environ["HYPRLAND_INSTANCE_SIGNATURE"]
+xdg_runtime_dir = os.environ["XDG_RUNTIME_DIR"]
 
 with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:
-    client.connect(f"/tmp/hypr/{hyprland_sig}/.socket2.sock")
+    client.connect(f"{xdg_runtime_dir}/hypr/{hyprland_sig}/.socket2.sock")
 
     while True:
         bytes_recved = client.recv(1024)
