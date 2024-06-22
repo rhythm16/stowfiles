@@ -74,11 +74,10 @@ keymap("n", "gP", ":bprevious<CR>", opts)
 keymap("n", "gD", ":bdelete<CR>:bnext<CR>", opts)
 
 -- trouble
-keymap("n", "==", ":TroubleToggle<CR>", opts)
-keymap("n", "=w", ":TroubleToggle workspace_diagnostics<CR>", opts)
-keymap("n", "=d", ":TroubleToggle document_diagnostics<CR>", opts)
-keymap("n", "=q", ":TroubleToggle quickfix<CR>", opts)
-keymap("n", "=l", ":TroubleToggle loclist<CR>", opts)
+keymap("n", "==", ":Trouble diagnostics toggle<CR>", opts)
+keymap("n", "=y", ":Trouble symbols toggle<CR>", opts)
+keymap("n", "=q", ":Trouble quickfix toggle<CR>", opts)
+keymap("n", "=l", ":Trouble loclist toggle<CR>", opts)
 
 -- working directory
 keymap("n", "\\", ":cd ..<CR>:NvimTreeToggle<CR>" ..
