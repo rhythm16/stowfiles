@@ -1,0 +1,26 @@
+set imap_user = "r09922117@csie.ntu.edu.tw"
+
+set folder = "imaps://imap.gmail.com:993"
+set smtp_url = "smtp://r09922117@csie.ntu.edu.tw@smtp.gmail.com:587"
+
+set imap_authenticators = "oauthbearer:xoauth2"
+set smtp_authenticators = ${imap_authenticators}
+
+set imap_oauth_refresh_command = "~/mutt_oauth2.py ~/gmail_token"
+set smtp_oauth_refresh_command = ${imap_oauth_refresh_command}
+
+set spool_file = "imaps://imap.gmail.com:993/[Gmail]/All Mail"
+set record = /dev/null
+set trash = "imaps://imap.gmail.com:993/[Gmail]/Trash"
+set postponed = "imaps://imap.gmail.com:993/[Gmail]/Drafts"
+
+mailboxes =INBOX ="[Gmail]/Sent Mail" ="[Gmail]/Drafts" ="[Gmail]/Spam" ="[Gmail]/Trash"
+
+set from = ${imap_user}
+set real_name = "Wei-Lin Chang"
+
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+
+bind pager , next-line
+bind pager . previous-line
