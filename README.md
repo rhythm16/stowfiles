@@ -2,27 +2,15 @@ neovim config mainly adopted from the [LunarVim/Neovim-from-scratch](https://git
 
 ## Installation
 ```
-sudo apt install stow git cscope
-# rust & cargo
-curl https://sh.rustup.rs -sSf | sh
-cargo install bob-nvim
-cargo install ripgrep
-cargo install tree-sitter-cli
-# bob install x.y.z
-# bob use x.y.z
-# bob use HASH (if on aarch64)
-# install universal ctags
-
-# other nice things:
-cargo install zellij
-cargo install bat
+# clone this repo
+cd stowfiles
+stow eww fish hypr kitty neovim neomutt
 ```
+
+Go to https://github.com/neomutt/neomutt/tree/main/contrib/oauth2 , see how to use `mutt_oauth.py`, and generate a gmail token file.
+The location of `mutt_oauth2.py` and the gmail token file must be as specified in `neomuttrc`.
 
 ## Dependencies
 * `ripgrep` (for telescope live-grep)
-* universal ctags (for rust tagbar)
 * tree-sitter cli (for tree-sitter)
 * a [nerd font](https://www.nerdfonts.com/)
-
-## Fixes
-* `trouble.nvim` [PR](https://github.com/folke/trouble.nvim/pull/72)
