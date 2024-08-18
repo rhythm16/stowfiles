@@ -139,6 +139,7 @@ nvim_tree.setup {
     git = {
         enable = true,
         ignore = true,
+        timeout = 10000,
     },
 }
 
