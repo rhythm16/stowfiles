@@ -1,12 +1,13 @@
 set imap_user = "r09922117@csie.ntu.edu.tw"
+set my_tokenfile = "~/gmail_token"
 
 set folder = "imaps://imap.gmail.com:993"
-set smtp_url = "smtp://r09922117@csie.ntu.edu.tw@smtp.gmail.com:587"
+set smtp_url = "smtp://${imap_user}@smtp.gmail.com:587"
 
 set imap_authenticators = "oauthbearer:xoauth2"
 set smtp_authenticators = ${imap_authenticators}
 
-set imap_oauth_refresh_command = "~/mutt_oauth2.py ~/gmail_token"
+set imap_oauth_refresh_command = "~/mutt_oauth2.py ${my_tokenfile}"
 set smtp_oauth_refresh_command = ${imap_oauth_refresh_command}
 
 set spool_file = "imaps://imap.gmail.com:993/[Gmail]/All Mail"
