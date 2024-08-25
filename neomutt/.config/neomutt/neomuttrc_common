@@ -1,5 +1,11 @@
-set imap_user = "r09922117@csie.ntu.edu.tw"
-set my_tokenfile = "~/gmail_token"
+# to make this work, create another file with the following:
+#
+# set imap_user = "EMAIL ADDRESS"
+# set my_tokenfile = "GMAIL TOKEN FILE"
+
+# source ~/.config/neomutt/neomuttrc_common
+#
+# and then neomutt -F that file
 
 set folder = "imaps://imap.gmail.com:993"
 set smtp_url = "smtp://${imap_user}@smtp.gmail.com:587"
