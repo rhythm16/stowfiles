@@ -29,5 +29,88 @@ set real_name = "Wei-Lin Chang"
 set sidebar_visible
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 
-bind pager , next-line
-bind pager . previous-line
+set index_format = "%4C  %Z  %{%b %d}  %-25.25L (%<l?%4l&%4c>)  %s"
+
+unbind * ,
+unbind * .
+unbind * G
+unbind * <up>
+unbind * <down>
+unbind * o
+unbind * n
+unbind * N
+unbind * i
+unbind * g
+unbind pager j
+unbind pager k
+bind generic,pager ,      next-line
+bind generic,pager .      previous-line
+bind generic       G      last-entry
+bind index         <up>   sidebar-prev
+bind index         <down> sidebar-next
+bind index         o      sidebar-open
+bind index,pager   n      search-next
+bind index,pager   N      search-opposite
+bind pager         g      top
+bind pager         G      bottom
+
+# https://neomutt.org/guide/configuration.html#11-1-%C2%A0color-style
+
+color normal        default             default
+color indicator     brightyellow        color90
+color tree          default             default
+color status        brightyellow        color234
+color error         brightred           default
+color message       red                 default
+color signature     red                 default
+color attachment    yellow              default
+color search        brightyellow        red
+color tilde         brightmagenta       default
+color markers       red                 default
+color hdrdefault    cyan                default
+color bold          green               black
+color underline     yellow              black
+
+# https://neomutt.org/guide/advancedusage.html#patterns
+
+color index         default             color233            ~U # unread
+color index_flags   black               white               ~D # deleted
+color index_flags   green               default             ~g # cryptographically signed
+color index_flags   brightgreen         default             ~G # cryptographically encrypted
+color index_author  color130            default             ~A # all
+color index_author  yellow              color68             ~P # from self
+color index_author  blue                brightred           ~F # flagged mail
+color index_author  yellow              default             ~l # messages addressed to a known mailing list
+color index_flags   yellow              default             ~l
+color index_date    cyan                default
+color index_size    color95             default
+color index_number  green               default
+
+color header        brightcyan          default             '^From:'
+color header        brightyellow        default             '^Subject:'
+color header        black               brightgreen         '^User-Agent:.*Mutt'
+color header        black               green               '^User-Agent: Mozilla/5.0.*Linux'
+
+color body          brightcyan          default             "[-a-z_0-9.+]+@[-a-z_0-9.]+"
+color body          cyan                default             "((ftp|http|https)://|news:)[^ >)\"\t]+"
+color body          white               brightblue          "\\[[0-9]+\\]"
+color body          yellow              default             "\\[\\.\\.\\.?\\]"
+
+color body          cyan                color234            "^diff \-.*"
+color body          cyan                default             "^index [a-f0-9].*"
+color body          cyan                default             "^\-\-\- .*"
+color body          cyan                default             "^[\+]{3} .*"
+color body          green               default             "^[\+][^\+]+.*"
+color body          red                 default             "^\-[^\-]+.*"
+color body          brightblue          default             "^@@ .*"
+
+color quoted        magenta             default # Quoting Ebene 1
+color quoted1       blue                default # Quoting Ebene 2
+color quoted2       yellow              default # Quoting Ebene 3
+color quoted3       magenta             default # Quoting Ebene 4
+color quoted4       blue                default # Quoting Ebene 5
+color quoted5       cyan                default # Quoting Ebene 6
+color quoted6       green               default # Quoting Ebene 7
+color quoted7       red                 default # Quoting Ebene 8
+color quoted8       magenta             default # Quoting Ebene 9
+color quoted9       blue                default # Quoting Ebene 10
