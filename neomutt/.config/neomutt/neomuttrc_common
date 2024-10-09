@@ -53,6 +53,7 @@ bind index,pager   n      search-next
 bind index,pager   N      search-opposite
 bind pager         g      top
 bind pager         G      bottom
+bind index         R      group-chat-reply
 
 # https://neomutt.org/guide/configuration.html#11-1-%C2%A0color-style
 
