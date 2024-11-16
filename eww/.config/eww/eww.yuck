@@ -40,6 +40,7 @@
        (box :halign "center" (label :text text :class "info-cls" :tooltip calendar))
        (box :space-evenly "false" :halign "end" :spacing 18
          (label :text ip)
+         (label :text { vpn == 1 ? "VPN" : "" })
          (_network :strength net :offline "󰤮" :excellent "" :good "󰤥"
                    :okay "󰤢" :slow "󰤟")
          (_battery :status {EWW_BATTERY.BAT0.status}
@@ -84,6 +85,11 @@
 (defpoll ip :interval "3s"
         :initial ""
         `python3 ./show_ip.py`
+)
+
+(defpoll vpn :interval "3s"
+        :initial "0"
+        `nmcli con show --active | grep vpn | wc -l`
 )
 
 (defpoll time :interval "3s"
