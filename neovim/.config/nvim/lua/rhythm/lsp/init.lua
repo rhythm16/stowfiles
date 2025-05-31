@@ -2,28 +2,9 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("rhythm.lsp.handlers").setup()
-require("mason-lspconfig").setup_handlers {
--- The first entry (without a key) will be the default handler
--- and will be called for each installed server that doesn't have
--- a dedicated handler.
-    function (server_name) -- default handler (optional)
-        local opts = {
-            on_attach = require("rhythm.lsp.handlers").on_attach,
-            capabilities = require("rhythm.lsp.handlers").capabilities,
-        }
-        -- server specific opts
-        if server_name == "lua_ls" then
-             local lua_ls_opts = require("rhythm.lsp.settings.lua_ls")
-             opts = vim.tbl_deep_extend("force", lua_ls_opts, opts)
-        end
-        require("lspconfig")[server_name].setup(opts)
-    end,
--- Next, you can provide targeted overrides for specific servers.
--- For example, a handler override for the `rust_analyzer`:
--- ["rust_analyzer"] = function ()
---     require("rust-tools").setup {}
--- end
-}
+
+local lua_ls_opts = require("rhythm.lsp.settings.lua_ls")
+vim.lsp.config['lua_ls'] = lua_ls_opts
 
 local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then

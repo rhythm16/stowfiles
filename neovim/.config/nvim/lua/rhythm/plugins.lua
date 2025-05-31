@@ -77,8 +77,8 @@ return packer.startup(function(use)
 
     -- lsp
     use "neovim/nvim-lspconfig"             -- enable LSP
-    use "williamboman/mason.nvim"           -- language server installer
-    use "williamboman/mason-lspconfig.nvim" -- helper plugin to smooth out the two above
+    use "mason-org/mason.nvim"           -- language server installer
+    use "mason-org/mason-lspconfig.nvim" -- helper plugin to smooth out the two above
 
     -- telescope
     use "nvim-telescope/telescope.nvim"
