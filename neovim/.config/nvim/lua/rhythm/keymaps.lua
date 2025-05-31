@@ -78,6 +78,9 @@ keymap("n", "=y", ":Trouble symbols toggle<CR>", opts)
 keymap("n", "=q", ":Trouble quickfix toggle<CR>", opts)
 keymap("n", "=l", ":Trouble loclist toggle<CR>", opts)
 
+-- blame
+keymap("n", "=i", ":BlameToggle<CR>", opts)
+
 -- working directory
 keymap("n", "\\", ":cd ..<CR>:NvimTreeToggle<CR>" ..
                   ":NvimTreeToggle<CR>" ..

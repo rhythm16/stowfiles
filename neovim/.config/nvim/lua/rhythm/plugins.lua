@@ -123,6 +123,9 @@ return packer.startup(function(use)
     -- cool animation
     use "eandrju/cellular-automaton.nvim"
 
+    -- git blame in nvim
+    use "FabijanZulj/blame.nvim"
+
     -- Automatically set up your config after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

@@ -30,7 +30,7 @@ wk.add({
     { "mu", "<cmd>lua vim.lsp.buf.signature_help()<CR>", desc = "Signature Help" },
 })
 wk.add({
-    { "=", group = "Telescope & Trouble" },
+    { "=", group = "Telescope, Trouble, and Blame" },
     { "==", "<cmd>Trouble diagnostics toggle<CR>", desc = "Trouble" },
     { "=F", "<cmd>Telescope find_files hidden=true<CR>", desc = "Find File hidden" },
     { "=G", "<cmd>Telescope live_grep cwd=", desc = "Live Grep at" },
@@ -42,6 +42,7 @@ wk.add({
     { "=q", "<cmd>Trouble qflist toggle<CR>", desc = "Trouble Quickfix" },
     { "=s", "<cmd>Telescope grep_string<CR>", desc = "Grep String" },
     { "=y", "<cmd>Trouble symbols toggle<CR>", desc = "Trouble Symbols" },
+    { "=i", "<cmd>BlameToggle<CR>", desc = "Git Blame" },
 })
 wk.add({
     { "z", group = "cscope" },

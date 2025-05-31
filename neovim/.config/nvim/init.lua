@@ -17,5 +17,6 @@ require "rhythm.which-key"
 require "rhythm.cscope_maps"
 require "rhythm.bufferline"
 require "rhythm.aerial"
+require "rhythm.blame"
 require "rhythm.lsp"
 
