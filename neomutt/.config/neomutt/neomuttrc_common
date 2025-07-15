@@ -31,6 +31,8 @@ set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 
 set index_format = "%4C  %Z  %{%b %d}  %-25.25L (%<l?%4l&%4c>)  %s"
 
+set use_threads=yes sort=date sort_aux=date
+
 unbind * ,
 unbind * .
 unbind * G
