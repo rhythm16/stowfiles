@@ -7,12 +7,12 @@ configs.setup {
     ensure_installed = {
         "bash",
         "c",
--- this needs tree-sitter-cli and node
---        "devicetree",
+-- this needs tree-sitter-cli
+        "devicetree",
         "gitattributes",
 -- this needs node
---        "gitignore",
-        "latex",
+--        "latex",
+        "gitignore",
         "lua",
         "make",
         "markdown",
