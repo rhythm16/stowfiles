@@ -46,6 +46,17 @@ telescope.setup {
                 ["T"] = actions.select_tab,
             },
         },
+        vimgrep_arguments = {
+            -- only hidden is extra, others are defaults in my understanding
+            "rg",
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--smart-case",
+            "--hidden",
+        },
     },
     extensions = {
         file_browser = {
