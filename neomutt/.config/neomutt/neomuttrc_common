@@ -1,27 +1,42 @@
-# to make this work, create another file with the following:
+# to make this work, create another file with the following (the order is important!):
 #
 # set imap_user = "EMAIL ADDRESS"
-# set my_tokenfile = "GMAIL TOKEN FILE"
-
+# set my_tokenfile = "TOKEN FILE"
+#
 # source ~/.config/neomutt/neomuttrc_common
 #
+# Gmail:
+# set folder = "imaps://imap.gmail.com:993"
+# set smtp_url = "smtp://${imap_user}@smtp.gmail.com:587"
+# Outlook:
+# set folder = "imaps://outlook.office365.com:993/"
+# set smtp_url = "smtp://${imap_user}@smtp.office365.com:587/"
+#
+# Gmail:
+# set spool_file = "imaps://imap.gmail.com:993/[Gmail]/All Mail"
+# set record = /dev/null
+# set trash = "imaps://imap.gmail.com:993/[Gmail]/Trash"
+# set postponed = "imaps://imap.gmail.com:993/[Gmail]/Drafts"
+# Outlook:
+# set spool_file = +INBOX
+# set record = /dev/null
+# set trash = ="Deleted Items"
+# set postponed = ="Drafts"
+#
+# Gmail:
+# mailboxes =INBOX ="[Gmail]/Sent Mail" ="[Gmail]/Drafts" ="[Gmail]/Spam" ="[Gmail]/Trash"
+# Outlook:
+# mailboxes =INBOX =Drafts ="Sent Items" ="Deleted Items" ="Junk Email" =Archive
+#
+# and then comment out smtp_authenticators, smtp_oauth_refresh_command if you'd like to
+# use password to authenticate sending emails
 # and then neomutt -F that file
-
-set folder = "imaps://imap.gmail.com:993"
-set smtp_url = "smtp://${imap_user}@smtp.gmail.com:587"
 
 set imap_authenticators = "oauthbearer:xoauth2"
 set smtp_authenticators = ${imap_authenticators}
 
 set imap_oauth_refresh_command = "~/mutt_oauth2.py ${my_tokenfile}"
 set smtp_oauth_refresh_command = ${imap_oauth_refresh_command}
-
-set spool_file = "imaps://imap.gmail.com:993/[Gmail]/All Mail"
-set record = /dev/null
-set trash = "imaps://imap.gmail.com:993/[Gmail]/Trash"
-set postponed = "imaps://imap.gmail.com:993/[Gmail]/Drafts"
-
-mailboxes =INBOX ="[Gmail]/Sent Mail" ="[Gmail]/Drafts" ="[Gmail]/Spam" ="[Gmail]/Trash"
 
 set from = ${imap_user}
 set real_name = "Wei-Lin Chang"
