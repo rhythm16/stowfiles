@@ -88,6 +88,7 @@ return packer.startup(function(use)
     use {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate",
+        branch = "main",
     }
     use "nvim-treesitter/nvim-treesitter-context"
 
